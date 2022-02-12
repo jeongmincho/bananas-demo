@@ -49,7 +49,7 @@ export default function Bananas({ count = 100, depth = 80 }) {
         color="orange"
       />
       <Suspense fallback={null}>
-        <Environment preset="sunset" />
+        <ambientLight intensity={0.7} />
         {Array.from({ length: count }, (_, i) => (
           <Banana key={i} z={-(i / count) * depth - 20} />
         ))}
